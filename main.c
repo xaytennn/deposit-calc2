@@ -12,7 +12,7 @@ int main()
         scanf("%d", &summ);
         i = checkS(summ);
         if (i == -1) {
-            printf("Error, incorrect amount of money.\n");
+            printf("Error, incorrect amount of money. There should be numerical value (>= 10000).\n");
         }
     } while (i == -1);
     
@@ -21,7 +21,7 @@ int main()
         scanf("%d", &date);
         i = checkD(date);
         if (i == -1) {
-            printf("Error, incorrect amount of days.\n");
+            printf("Error, incorrect amount of days. There should be a positive integer (<= 365).\n");
         }
     } while (i == -1);
 
