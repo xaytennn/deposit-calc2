@@ -63,7 +63,7 @@ int check(int summ, int date)
             profit = summ * 112 / 100;
         }
     } else {
-        if (days <= 30) {
+        if (date <= 30) {
             profit = summ * 9 / 10;
         } else if (date <= 120) {
             profit = summ * 103 / 100;
