@@ -8,7 +8,7 @@ int check(int summ, int date);
 int main()
 {
     int i = -1, summ, date;
-    
+
     do {
         printf("Input amount of money: ");
         scanf("%d", &summ);
@@ -20,7 +20,7 @@ int main()
             return 0;
         }
     } while (i == -1);
-    
+
     do {
         printf("Input amount of days: ");
         scanf("%d", &date);
