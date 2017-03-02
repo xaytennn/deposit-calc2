@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int checkS(int summ);
 int checkD(int date);
@@ -14,6 +15,9 @@ int main()
         i = checkS(summ);
         if (i == -1) {
             printf("Error, incorrect amount of money. There should be numerical value (>= 10000).\n");
+        } else if (i == 0) {
+            printf("Error.\n");
+            return 0;
         }
     } while (i == -1);
     
@@ -23,6 +27,9 @@ int main()
         i = checkD(date);
         if (i == -1) {
             printf("Error, incorrect amount of days. There should be a positive integer (<= 365).\n");
+        } else if (i == 0) {
+            printf("Error.\n");
+            return 0;
         }
     } while (i == -1);
 
@@ -36,6 +43,8 @@ int checkS(int summ)
     int i = -1;
     if (summ >= 10000) {
         i = 1;
+    } else if (!isdigit(summ)) {
+        i = 0;
     }
     return i;
 }
@@ -45,6 +54,8 @@ int checkD(int date)
     int i = -1;
     if (date >= 0 && date <= 365) {
         i = 1;
+    } else if (!isdigit(summ)) {
+        i = 0;
     }
     return i;
 }
