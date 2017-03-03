@@ -54,7 +54,7 @@ int checkD(int date)
     int i = -1;
     if (date >= 0 && date <= 365) {
         i = 1;
-    } else if (!isdigit(summ)) {
+    } else if (!isdigit(date)) {
         i = 0;
     }
     return i;
