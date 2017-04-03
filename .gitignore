@@ -1,9 +1,9 @@
-*.o
+Makefile
+README.md
+*.exe
+bin/*.exe
+build/*.o
 
 .*.c.swp
 *.c~
 #*.c#
-
-Makefile
-README.md
-*.exe
