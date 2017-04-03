@@ -1,0 +1,9 @@
+*.o
+
+.*.c.swp
+*.c~
+#*.c#
+
+Makefile
+README.md
+*.exe
