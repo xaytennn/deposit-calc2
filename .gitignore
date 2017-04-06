@@ -1,5 +1,3 @@
-Makefile
-README.md
 *.exe
 bin/*.exe
 build/*.o
