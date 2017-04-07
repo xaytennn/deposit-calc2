@@ -4,7 +4,11 @@ FO1 = build\main.o
 FO2 = build\deposit.o
 PROG = bin\deposit-calc
 
-all: $(PROG)
+all: dir $(PROG)
+
+dir:
+	mkdir bin
+	mkdir build
 
 $(FO1): $(FC1)
 	gcc -Wall -Werror -c $(FC1) -o $(FO1)
