@@ -14,7 +14,7 @@ $(FO1): $(FC1)
 	gcc -Wall -Werror -c $(FC1) -o $(FO1)
 
 $(FO2): $(FC2)
-	gcc -Wall -Werror -c $(FC2) -o $(FO2)
+	gcc -Wall -Werror -c $(FC2) deposit.h -o $(FO2)
 
 $(PROG): $(FO1) $(FO2)
 	gcc $(FO1) $(FO2) -o $(PROG)
