@@ -26,4 +26,5 @@ uninstall:
 	rm -rf $(PROG)
 
 clean:
-	rm -rf \build\*.o
+	rm -rfd build
+	rm -rfd bin
