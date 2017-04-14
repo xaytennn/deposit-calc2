@@ -1,6 +1,7 @@
 *.exe
 bin/*.exe
-build/*.o
+build/src/*.o
+build/test/*.o
 
 .*.c.swp
 *.c~

@@ -1,4 +1,4 @@
-#include "deposit.h"
+#include <deposit.h>
 #include <ctype.h>
 
 int checkS(int summ)
