@@ -13,3 +13,27 @@ CTEST(suite, simle)
     const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
+
+CTEST(suite, simle2)
+{
+    const int a = 100000;
+    const int result = checkS(a);
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(suite, simle3)
+{
+    const int a = 20;
+    const int result = checkD(a);
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(suite, simle4)
+{
+    const int a = 300;
+    const int result = checkD(a);
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}

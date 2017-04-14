@@ -40,8 +40,8 @@ $(TO1): $(TC1)
 $(TO2): $(TC2)
 	gcc $(IFLAGS) $(IFLAGT) -c $(TC2) -o $(TO2)
 
-$(TO3): $(TC1)
-	gcc -c $(TC3) -o $(TO3)
+$(TO3): $(TC3)
+	gcc $(IFLAGS) $(IFLAGT) -c $(TC3) -o $(TO3)
 
 $(TEST): $(TO1) $(TO2) $(TO3) $(FO2)
 	gcc $(TO1) $(TO2) $(TO3) $(FO2) -o $(TEST)
