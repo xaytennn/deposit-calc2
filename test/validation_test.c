@@ -32,3 +32,12 @@ CTEST(suite, bad4)
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
+
+CTEST(suite, bad5)
+{
+    const int a = 0;
+    const int b = 0;
+    const int result = check(a, b);
+    const int expected = -1;
+    ASSERT_EQUAL(expected, result);
+}

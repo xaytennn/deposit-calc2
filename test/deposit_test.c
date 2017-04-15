@@ -37,3 +37,12 @@ CTEST(suite, simle4)
     const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
+
+CTEST(suite, simle5)
+{
+    const int a = 150000;
+    const int b = 300;
+    const int result = check(a, b);
+    const int expected = a * 115 / 100;
+    ASSERT_EQUAL(expected, result);
+}

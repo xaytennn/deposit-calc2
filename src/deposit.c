@@ -25,8 +25,8 @@ int checkD(int date)
 
 int check(int summ, int date)
 {
-    int profit;
-    if (summ <= 100000) {
+    int profit = -1;
+    if (summ >= 10000 && summ <= 100000) {
         if (date <= 30) {
             profit = summ * 9 / 10;
         } else if (date <= 120) {
@@ -36,7 +36,7 @@ int check(int summ, int date)
         } else {
             profit = summ * 112 / 100;
         }
-    } else {
+    } else if (summ > 100000){
         if (date <= 30) {
             profit = summ * 9 / 10;
         } else if (date <= 120) {
