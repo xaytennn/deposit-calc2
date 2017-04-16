@@ -1,17 +1,17 @@
 .PHONY = all clean mkdir install uninstall
 
-FC1 = src\main.c
-FC2 = src\deposit.c
-FO1 = build\src\main.o
-FO2 = build\src\deposit.o
-PROG = bin\deposit-calc
-TC1 = test\main.c
-TC2 = test\deposit_test.c
-TC3 = test\validation_test.c
-TO1 = build\test\main.o
-TO2 = build\test\deposit_test.o
-TO3 = build\test\validation_test.o
-TEST = bin\deposit-calc-test
+FC1 = src/main.c
+FC2 = src/deposit.c
+FO1 = build/src\main.o
+FO2 = build/src\deposit.o
+PROG = bin/deposit-calc
+TC1 = test/main.c
+TC2 = test/deposit_test.c
+TC3 = test/validation_test.c
+TO1 = build/test/main.o
+TO2 = build/test/deposit_test.o
+TO3 = build/test/validation_test.o
+TEST = bin/deposit-calc-test
 
 CFLAG = -Wall -Werror
 IFLAGS = -I src
@@ -22,8 +22,8 @@ all: clean dir $(PROG) $(TEST)
 dir:
 	mkdir bin
 	mkdir build
-	mkdir build\src
-	mkdir build\test
+	mkdir build/src
+	mkdir build/test
 
 $(FO1): $(FC1)
 	gcc $(CFLAG) $(IFLAGS) -c $(FC1) -o $(FO1)
@@ -47,7 +47,7 @@ $(TEST): $(TO1) $(TO2) $(TO3) $(FO2)
 	gcc $(TO1) $(TO2) $(TO3) $(FO2) -o $(TEST)
 
 install:
-	install ./deposit-calc \bin
+	install ./deposit-calc /bin
 
 uninstall:
 	rm -rf $(PROG)
