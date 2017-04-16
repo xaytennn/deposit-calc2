@@ -13,7 +13,7 @@ CTEST(suite, bad2)
 {
     const int a = -5000;
     const int result = checkS(a);
-    const int expected = 0;
+    const int expected = -1;
     ASSERT_EQUAL(expected, result);
 }
 
