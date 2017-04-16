@@ -54,5 +54,5 @@ uninstall:
 	rm -rf $(TEST)
 
 clean:
-	rm -rfd build
-	rm -rfd bin
+	rm -rf build
+	rm -rf bin
