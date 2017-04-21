@@ -1,7 +1,7 @@
 #include <deposit.h>
 #include <ctest.h>
 
-CTEST(suite, simle)
+CTEST(check_input_data_deposit, good1)
 {
     // Given
     const int a = 10000;
@@ -14,7 +14,7 @@ CTEST(suite, simle)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(suite, simle2)
+CTEST(check_input_data_deposit, good2)
 {
     const int a = 100000;
     const int result = checkS(a);
@@ -22,7 +22,7 @@ CTEST(suite, simle2)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(suite, simle3)
+CTEST(check_input_data_days, good1)
 {
     const int a = 20;
     const int result = checkD(a);
@@ -30,7 +30,7 @@ CTEST(suite, simle3)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(suite, simle4)
+CTEST(check_input_data_days, good2)
 {
     const int a = 300;
     const int result = checkD(a);
@@ -38,7 +38,7 @@ CTEST(suite, simle4)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(suite, simle5)
+CTEST(check_input_data_summ, good)
 {
     const int a = 150000;
     const int b = 300;
