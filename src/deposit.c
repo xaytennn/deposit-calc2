@@ -1,7 +1,7 @@
-#include <deposit.h>
-#include <ctype.h>
+#include "deposit.h"
+#include "ctype.h"
 
-int checkS(int summ)
+int check_sum(int summ)
 {
     int i = -1;
     if (summ >= 10000) {
@@ -12,7 +12,7 @@ int checkS(int summ)
     return i;
 }
 
-int checkD(int date)
+int check_data(int date)
 {
     int i = -1;
     if (date >= 0 && date <= 365) {

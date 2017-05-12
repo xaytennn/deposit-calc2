@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <deposit.h>
+#include "deposit.h"
 
 int main()
 {
@@ -8,7 +8,7 @@ int main()
     do {
         printf("Input amount of money: ");
         scanf("%d", &summ);
-        i = checkS(summ);
+        i = check_sum(summ);
         if (i == -1) {
             printf("Error, incorrect amount of money. There should be numerical value (>= 10000).\n");
         } else if (i == 0) {
@@ -20,7 +20,7 @@ int main()
     do {
         printf("Input amount of days: ");
         scanf("%d", &date);
-        i = checkD(date);
+        i = check_data(date);
         if (i == -1) {
             printf("Error, incorrect amount of days. There should be a positive integer (<= 365).\n");
         } else if (i == 0) {

@@ -1,39 +1,39 @@
-#include <deposit.h>
-#include <ctest.h>
+#include "deposit.h"
+#include "ctest.h"
 
-CTEST(check_input_data_deposit, bad1)
+CTEST(validation_test_deposit_5000, simple_val_sum)
 {
     const int a = 5000;
-    const int result = checkS(a);
+    const int result = check_sum(a);
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check_input_data_deposit, bad2)
+CTEST(validation_test_deposit_minus_5000, simple_val_sum2)
 {
     const int a = -5000;
-    const int result = checkS(a);
+    const int result = check_sum(a);
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check_input_data_days, bad1)
+CTEST(validation_test_day_minus_10, simple_val_day)
 {
     const int a = -10;
-    const int result = checkD(a);
+    const int result = check_data(a);
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check_input_data_days, bad2)
+CTEST(validation_test_day_400, test_val_day2)
 {
     const int a = 400;
-    const int result = checkD(a);
+    const int result = check_data(a);
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check_input_data_summ, bad)
+CTEST(validation_test, simple_val)
 {
     const int a = 0;
     const int b = 0;
