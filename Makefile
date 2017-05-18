@@ -1,4 +1,4 @@
-.PHONY: all clean mkdir install uninstall
+.PHONY: all dir clean install uninstall
 
 FC1 = src/main.c
 FC2 = src/deposit.c
@@ -18,14 +18,14 @@ DAR = src
 BUT = build/test
 BT = bin/deposit-calc-test
 
-CFLAG = -Wall -Werror
+CFLAG = -Wall
 IFLAGS = -I src
 IFLAGT = -I thirdparty
 
- all: clean dir $(PROG) $(TEST)
+ all:  dir $(PROG) $(TEST)
 
  dir:
-	@if [ ! -d $(DUR) ] ; then echo "creating $(DUR)"; mkdir bin; mkdir build; mkdir build/src; mkdir build/test ; fi
+		@if [  -d bin ] ; then echo "1" ; else mkdir bin; mkdir build; mkdir build/src; mkdir build/test; fi
 
  $(FO1): $(FC1)
 	gcc $(CFLAG) $(IFLAGS) -c $(FC1) -o $(FO1)
