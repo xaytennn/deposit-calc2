@@ -11,7 +11,7 @@ CTEST(validation_test_deposit_5000, simple_val_sum)
 
 CTEST(validation_test_deposit_minus_5000, simple_val_sum2)
 {
-    const int a = -5000;
+    const int a = 5000;
     const int result = check_sum(a);
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
