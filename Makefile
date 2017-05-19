@@ -1,7 +1,7 @@
-BUILD_F = build/
-BIN_F = bin/
-SRC_F = src/
-TEST_F = test/
+BUILD_F = build
+BIN_F = bin
+SRC_F = src
+TEST_F = test
 SOURCES_O = $(BUILD_F)main.o $(BUILD_F)deposit.o
 KEYS = -Wall -Werror
 PROG = bin/deposit-calc
@@ -47,14 +47,7 @@ all: bin build $(PROG) $(TEST)
 clean:
 	rm -rf $(BIN_F)*
 	rm -rf $(BUILD_F)*
-	rmdir $(BIN_F)
-	rmdir $(BUILD_F)
-test: bin build $(BUILD_F)tests.o
-	$(CC) $(KEYS) $(BUILD_F)tests.o -o $(BIN_F)tests
-
-$(BUILD_F)tests.o : $(TEST_F)main.c
-	$(CC) $(KEYS) -c $(TEST_F)main.c -o $(BUILD_F)tests.o
 bin:
-	test ! -d $(BIN_F) && mkdir $(BIN_F)
+	mkdir $(BIN_F)
 build:
-	test ! -d $(BUILD_F) && mkdir $(BUILD_F) && mkdir build/src && mkdir build/test
+	mkdir  $(BUILD_F); mkdir build/src; mkdir build/test
